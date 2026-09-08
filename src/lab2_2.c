@@ -13,7 +13,12 @@
 
 long long factorial(int n) {
     // TODO: compute factorial iteratively
-    return 1; // placeholder
+    int x = n;
+    for (int i = n-1; i >= 1; i--)
+    {
+        x = x * i;
+    }
+    return x; // placeholder
 }
 
 int main(void) {
@@ -21,6 +26,16 @@ int main(void) {
 
     printf("Enter a non-negative integer n: ");
     scanf("%d", &n);
+
+    while (n < 1){
+        printf("N is too low. What is n value?: ");
+        scanf("%d", &n);
+    }
+    int factorial_sum = factorial(n); 
+    printf("Factorial value is: ");
+    printf("%d\n", factorial_sum);
+
+
 
     // TODO: validate input, call function, print result
 
